@@ -15,14 +15,26 @@
     ></script>
     <style>
       * {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        max-width: 1170px;
+        width: 90vw;
+        margin: 0 auto;
+        padding: 4rem 0;
+        gap: 1rem;
+        grid-template-columns: 200px 1fr;
+      }
+      .product_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
       }
     </style>
   </head>
   <body>
-    <nav class="flex justify-center items-center h-[6rem]">
+    <nav class="flex justify-center items-center h-[6rem] top-[1rem]">
       <div class="flex justify-between w-[90vw] max-w-[1170px] items-center">
         <div>
           <ul class="flex gap-5 text-[22px] font-light tracking-wider">
@@ -37,11 +49,48 @@
         <div><ion-icon name="cart-outline" class="text-4xl"></ion-icon></div>
       </div>
     </nav>
+
     <section class="flex items-center justify-center h-[20vh] bg-slate-100">
       <div class="mx-auto w-[90vw] max-w-[1170px]">
         <h2 class="text-3xl font-bold tracking-wider text-gray-500">
-          Home/Products
+          Home / Products
         </h2>
+      </div>
+    </section>
+
+    <section class="container">
+      <div>
+        <div class="sticky top-[1rem]">
+          <form class="p-2 sticky mb-2">
+            <input
+              type="search"
+              value="Search..."
+              class="outline-transparent bg-slate-100 p-[8px] rounded-sm focus:outline-2 focus:outline-sky-500 tracking-wider"
+            />
+          </form>
+
+          <ul class="mb-2 *:p-[2px] *:m-1 *:text-gray-500">
+            Company
+            <li>All</li>
+            <li>Ikea</li>
+            <li>Marcos</li>
+            <li>Caressa</li>
+            <li>Liddy</li>
+          </ul>
+
+          <div class="mb-2">Price</div>
+          <form class="mb-2">
+            <input type="range" min="0" max="80" />
+          </form>
+          <div class="text-gray-500">Value</div>
+        </div>
+      </div>
+
+      <div class="product_container">
+        <article>
+          <img />
+          <footer><div></div></footer>
+        </article>
       </div>
     </section>
     <script type="module" src="./script.js"></script>
