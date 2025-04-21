@@ -61,37 +61,39 @@
     <section class="container">
       <div>
         <div class="sticky top-[1rem]">
-          <form class="p-2 sticky mb-2">
+          <form class="sticky mb-2" id="form1">
             <input
               type="search"
               value="Search..."
-              class="outline-transparent bg-slate-100 p-[8px] rounded-sm focus:outline-2 focus:outline-sky-500 tracking-wider"
+              class="outline-transparent bg-slate-100 p-[4px] rounded-sm focus:outline-2 focus:outline-sky-500 tracking-wider"
+              id="search"
             />
           </form>
 
-          <ul class="mb-2 *:p-[2px] *:m-1 *:text-gray-500">
+          <ul class="mb-2 *:p-[2px] *:m-1 *:text-gray-500 filter_list">
             Company
-            <li>All</li>
-            <li>Ikea</li>
-            <li>Marcos</li>
-            <li>Caressa</li>
-            <li>Liddy</li>
+            <li data-id="All">All</li>
+            <li data-id="Ikea">Ikea</li>
+            <li data-id="Marcos">Marcos</li>
+            <li data-id="Caressa">Caressa</li>
+            <li data-id="Liddy">Liddy</li>
           </ul>
 
           <div class="mb-2">Price</div>
           <form class="mb-2">
-            <input type="range" min="0" max="80" />
+            <input
+              type="range"
+              min="0"
+              max="7999"
+              step="1000"
+              id="price_range"
+            />
           </form>
-          <div class="text-gray-500">Value</div>
+          <div class="text-gray-500" id="price_value">Value</div>
         </div>
       </div>
 
-      <div class="product_container">
-        <article>
-          <img />
-          <footer><div></div></footer>
-        </article>
-      </div>
+      <div class="product_container"></div>
     </section>
     <script type="module" src="./script.js"></script>
   </body>
